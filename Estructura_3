@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+
+struct Humano{
+    char nombre[20];
+    int edad;
+    float peso;
+};
+
+void mostrarDatos(struct Humano *p);
+
+int main()
+{
+    struct Humano juan = {"Juan",27,79.5};
+    mostrarDatos(&juan);
+    
+    return 0;
+}
+
+
+void mostrarDatos(struct Humano *p){
+    printf("%s\n",p->nombre); // (*p).nombre
+    printf("%d\n",p->edad);
+    printf("%.2f\n",p->peso);
+}
