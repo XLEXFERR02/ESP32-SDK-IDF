@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+struct Humano{
+    char nombre[20];
+    int edad;
+    float peso;
+};
+
+int main()
+{
+    //struct Humano juan = {"Juan",27,79.5};
+    struct Humano juan;
+    
+    strcpy(juan.nombre,"Juan");
+    juan.edad = 27;
+    juan.peso = 79.5;
+    
+    printf("%s\n",juan.nombre);
+    printf("%d\n",juan.edad);
+    printf("%.2f\n",juan.peso);
+    
+    return 0;
+}
+
