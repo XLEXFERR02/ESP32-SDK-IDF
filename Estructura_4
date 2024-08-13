@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+struct Humano{
+    char nombre[20];
+    int edad;
+    float peso;
+};
+
+struct Humano crearHumano(char *,int ,int );
+void mostrarDatos(struct Humano *);
+
+int main()
+{
+    struct Humano juan = crearHumano("Juan",27,79.5);
+    mostrarDatos(&juan);
+    return 0;
+}
+
+void mostrarDatos(struct Humano *p){
+    printf("%s\n",p->nombre); //(*p).nombre)
+    printf("%d\n",p->edad);
+    printf("%.2f\n",p->peso);
+}
+struct Humano crearHumano(char *n,int e,int pes){
+    struct Humano p;
+    strcpy(p.nombre,n);
+    p.edad = e;
+    p.peso = pes;
+    return p;
+}
