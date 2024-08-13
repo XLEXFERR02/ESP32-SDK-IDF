@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int suma(int*); //Prototipo
+
+int main()
+{
+    int a[] = {4,6,10};
+    int x = suma(a);
+    printf("La suma es: %d",x);
+    return 0;
+}
+
+int suma(int *p){
+    int c = p[0] + p[1] + p[2];
+    return c;
+}
