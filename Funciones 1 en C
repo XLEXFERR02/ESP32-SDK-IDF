@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int suma (int, int); // declaración o prototipo
+
+
+int main()
+{
+    int x;  // declaración
+    x =8;   // definición
+    
+    printf("El valor de %d \n",x);
+    
+    int r = suma(2,4);
+    printf("El valor de la suma es  %d \n",r);
+    return 0;
+}
+
+int suma (int x, int y) // definición
+    {
+        int c = x+y;
+        return c;
+    }
