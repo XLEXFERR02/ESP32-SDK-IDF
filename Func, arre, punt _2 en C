@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int suma(int, int); //declaración o prototipo
+
+int suma(int x, int y){ // definición
+    int c = x+y;
+    return c;
+}
+
+int resta(int, int); //declaración o prototipo
+
+int resta(int x, int y){ // definición
+    int c = x-y;
+    return c;
+}
+
+int main()
+{
+    int (*p)(int,int);
+    p = &suma;
+    
+    int r = p(2,3);
+    printf("El valor es %d\n",r);
+    
+    p = &resta;
+    int s = p(2,1);
+    printf("El valor es %d\n",s);
+    return 0;
+}
